@@ -3,8 +3,18 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 
-function App() {
+// Component
+const MyComponent = () => {
+  return (
+    <div class='Component'>Đây là Component viết được html trong file react</div>
+  );
+}
+const App = () => {
   const [count, setCount] = useState(0)
+  const test = (model) => {
+    console.log(model + 1);
+  }
+  test(2); // 3
 
   return (
     <>
@@ -17,6 +27,7 @@ function App() {
         </a>
       </div>
       <h1>Duy hoc Reactjs</h1>
+      <MyComponent />
       <div className="card">
         <button onClick={() => setCount((count) => count + 1)}>
           count is {count}
