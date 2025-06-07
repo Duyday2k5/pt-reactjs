@@ -1,0 +1,91 @@
+.todo-container {
+    max-width: 600px;
+    background: #23272f;
+    display: flex;
+    flex-direction: column;
+    margin: 50px auto;
+    border: 2px solid rgb(112, 173, 19);
+    outline: none;
+}
+
+.todo-title {
+    font-size: 36px;
+    text-align: center;
+    color: #58c4dc;
+    font-weight: 600;
+    margin: 30px 0;
+}
+
+.todo-owner {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    gap: 20px;
+}
+
+.todo-input {
+    width: 50%;
+    padding: 8px;
+    outline: none;
+    border-radius: 4px;
+}
+
+.todo-btn {
+    width: 60px;
+    border-radius: 4px;
+    outline: none;
+    color: #fff;
+    background: #58c4dc;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.todo-btn:hover {
+    /* opacity: .6; */
+    background: rgb(112, 173, 19);
+}
+
+.todo-data {
+    font-size: 16px;
+    color: #fff;
+    text-align: left;
+    margin: 36px 12px 12px 12px;
+    border: 1px solid rgba(201, 193, 193, 0.614);
+    padding: 16px;
+}
+
+.todo-data div:nth-child(1) {
+    margin-bottom: 12px;
+}
+
+.logo-react {
+    width: 30%;
+    margin: 28px auto;
+    will-change: filter;
+    transition: filter 300ms;
+    animation: logo-spin linear 20s infinite;
+}
+
+.logo-react:hover {
+    filter: drop-shadow(0 0 2em #646cffaa);
+}
+
+.logo-react:hover {
+    filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* 
+@media (prefers-reduced-motion: no-preference) {
+    .logo-react {
+     animation: logo-spin infinite 20s linear;}
+} */

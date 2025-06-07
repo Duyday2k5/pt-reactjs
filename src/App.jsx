@@ -1,45 +1,26 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import TodoOwner from './component/todo/todoOwner';
+import TodoData from './component/todo/todoData';
+import './component/todo/todo.css';
+import LogoReact from './assets/react.svg';
 
-// Component
-const MyComponent = () => {
-  return (
-    <div class='Component'>Đây là Component viết được html trong file react</div>
-  );
-}
 const App = () => {
-  const [count, setCount] = useState(0)
-  const test = (model) => {
-    console.log(model + 1);
+  const name = "Duy";
+  const work = "Student";
+  const info = {
+    name: "Nhat Duy",
+    age: 20,
   }
-  test(2); // 3
-
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Duy hoc Reactjs</h1>
-      <MyComponent />
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    <div className="todo-container">
+      <div className="todo-title">Todo List</div>
+      <TodoOwner />
+      <TodoData
+        name={name}
+        work={work}
+        info={info}
+      />
+      <img className="logo-react" src={LogoReact} alt="Logo React" />
+    </div>
   )
 }
 
