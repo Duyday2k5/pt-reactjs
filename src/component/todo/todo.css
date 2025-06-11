@@ -52,15 +52,10 @@
     text-align: left;
     margin: 36px 12px 12px 12px;
     border: 1px solid rgba(201, 193, 193, 0.614);
-    padding: 0 16px;
-}
-
-.todo-data div {
-    margin: 12px 0;
 }
 
 .logo-react {
-    width: 30%;
+    width: 20%;
     margin: 28px auto;
     will-change: filter;
     transition: filter 300ms;
@@ -73,6 +68,29 @@
 
 .logo-react:hover {
     filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+.data-btn {
+    display: flex;
+    justify-content: space-between;
+    margin: 12px;
+    align-items: center;
+}
+
+.data-btn button {
+    width: 60px;
+    height: 32px;
+    border-radius: 4px;
+    outline: none;
+    color: #fff;
+    background: #58c4dc;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.data-btn button:hover {
+    background-color: #fff;
+    color: #58c4dc
 }
 
 @keyframes logo-spin {

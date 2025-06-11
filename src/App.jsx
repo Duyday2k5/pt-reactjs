@@ -5,12 +5,13 @@ import LogoReact from './assets/react.svg';
 import { useState } from 'react';
 
 const App = () => {
-  const name = "Duy";
-  const work = "Student";
-  const info = {
-    name: "Nhat Duy",
-    age: 20,
-  }
+  // Chay thu giao dien
+  // const name = "Duy";
+  // const work = "Student";
+  // const info = {
+  //   name: "Nhat Duy",
+  //   age: 20,
+  // }
 
   const [todosList, setTodoList] = useState([
     {
@@ -21,19 +22,25 @@ const App = () => {
     },
     {
       id: 2,
-      name: "Nhat Minh",
+      name: "Nhat Banh",
       age: 11,
       work: "Student"
     }
-  ])
+  ]);
+
   const randomId = (min, max) => Math.floor(Math.random() * (max - min) + min);
-  const addNewTodo = (name) => {
+  const addNewTodo = (name, age, work) => {
     const newTodo = {
-      id: randomId(0, 1000000),
+      id: randomId(0, 99999),
       name: name,
+      age: age,
       work: work,
     }
     setTodoList([...todosList, newTodo])
+  }
+  const buttonDelete = (id) => {
+    const delTodo = todosList.filter(item => item.id != id)
+    setTodoList(delTodo)
   }
 
   return (
@@ -43,13 +50,18 @@ const App = () => {
         <TodoOwner
           addNewTodo={addNewTodo}
         />
-        <TodoData
-          name={name}
-          work={work}
-          info={info}
-          todosList={todosList}
-        />
-        <img className="logo-react" src={LogoReact} alt="Logo React" />
+        {
+          todosList.length > 0 ?
+            <TodoData
+              // name={name}
+              // work={work}
+              // info={info}
+              buttonDelete={buttonDelete}
+              todosList={todosList}
+            />
+            :
+            <img className="logo-react" src={LogoReact} alt="Logo React" />
+        }
       </div>
     </>
   );
