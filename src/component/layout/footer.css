@@ -1,0 +1,15 @@
+.footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    /* background: #23272f; */
+}
+
+.footer h3 {
+    font-size: 18px;
+    color: #58c4dc;
+}
+
+.footer span {
+    color: #000;
+}

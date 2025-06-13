@@ -3,6 +3,8 @@ import TodoData from './component/todo/todoData';
 import './component/todo/todo.css';
 import LogoReact from './assets/react.svg';
 import { useState } from 'react';
+import Header from './component/layout/header.jsx'
+import Footer from './component/layout/footer.jsx';
 
 const App = () => {
   // Chay thu giao dien
@@ -45,6 +47,7 @@ const App = () => {
 
   return (
     <>
+      <Header />
       <div className="todo-container">
         <div className="todo-title">Todo List</div>
         <TodoOwner
@@ -63,6 +66,7 @@ const App = () => {
             <img className="logo-react" src={LogoReact} alt="Logo React" />
         }
       </div>
+      <Footer />
     </>
   );
 }
