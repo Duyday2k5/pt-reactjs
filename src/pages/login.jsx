@@ -1,3 +1,4 @@
+import Footer from "../component/layout/footer";
 import Header from "../component/layout/header";
 
 
@@ -6,6 +7,7 @@ const LoginPage = () => {
         <>
             <Header />
             <div>Login Page</div>
+            <Footer />
         </>
 
     )

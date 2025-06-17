@@ -29,4 +29,5 @@ li a:hover:not(.active) {
 
 .active {
     background-color: #58c4dc;
+    transition: .3s;
 }
